@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Canela Deck Regular";
+  src: url("CanelaDeck/CanelaDeck-Regular-Trial.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Canela Deck Regular Italic";
+  src: url("CanelaDeck/CanelaDeck-RegularItalic-Trial.otf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Canela Deck Black";
+  src: url("CanelaDeck/CanelaDeck-Black-Trial.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Canela Deck Bold";
+  src: url("CanelaDeck/CanelaDeck-Bold-Trial.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Canela Deck Light";
+  src: url("CanelaDeck/CanelaDeck-Light-Trial.otf");
+  font-weight: normal;
+  font-style: light;
+}
+
+h1 {
+  font-family: "Canela Deck Bold";
+}
+h2 {
+  font-family: "Canela Deck Bold";
+}
+
+body {
+  font-family: "Canela Deck Regular", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.25;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #fdf6e3;
+  color: #333;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px), 
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 23px 23px; 
+  background-position: center;
+}
+
+main {
+  background-color: hsl(44, 87%, 96%);
+  box-shadow: 0px 0px 10px hsl(44, 25%, 80%);
+  width: 90%;
+  max-width: 800px;
+  min-width: 300px;
+
+  padding: 1rem;
+  margin: 2rem auto 1rem auto;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.left-header {
+  white-space: nowrap;
+}
+nav.right-header {
+  display: flex;
+  gap: 5px;
+}
+
+
+section {
+  padding: 0 2rem;
+}
+
+a {
+  color: #333;
+  text-decoration: none; /* no underline */
+}
+
+ul {
+  margin-left: 20px;
+}
+
+.cv-entry {
+  padding-bottom: 10px;
+}
+.cv-entry p {
+  display: flex;
+  justify-content: space-between;
+}
+.cv-entry p + p {
+  margin-top: -3px;
+}
+.cv-entry p strong {
+  white-space: nowrap;
+}
+.cv-entry ul {
+  margin-left: 20px;
+  font-size: 0.9rem;
+}
+.cv-entry li {
+  line-height: 0.95rem;
+}
+
+.duration {
+  margin-left: auto;
+  font-style: italic;
+}
+.duration-mobile {
+  display: none;
+}
+.publication-entry {
+  padding-bottom: 10px;
+}
+.publication-entry .authors {
+  margin-left: 10px;
+  font-size: 0.95rem;
+}
+.publication-entry .venue {
+  margin-left: 10px;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 769px) {
+  .cv-entry .duration-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 80%;
+  }
+  .duration {
+    display: none;
+  }
+  .duration-mobile {
+    display: block;
+    font-size: 0.9rem;
+  }
+}
